@@ -16,4 +16,8 @@ class Board
       puts '-----' unless index == @board.size - 1
     end
   end
+
+  def valid_move?(move)
+    move.is_a?(Array) && move.size == 2 && move.all? { |coord| coord.is_a?(Integer) && coord.between?(0, 2) }
+  end
 end
