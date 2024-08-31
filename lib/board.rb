@@ -26,6 +26,6 @@ class Board
   end
 
   def place_symbol(move, symbol)
-    @board[move[0]][move[1]] = symbol if move.empty_cell?
+    @board[move[0]][move[1]] = symbol if empty_cell?(move)
   end
 end
