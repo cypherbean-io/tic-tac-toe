@@ -20,4 +20,12 @@ class Board
   def valid_move?(move)
     move.is_a?(Array) && move.size == 2 && move.all? { |coord| coord.is_a?(Integer) && coord.between?(0, 2) }
   end
+
+  def empty_cell?(move)
+    @board[move[0]][move[1]].nil?
+  end
+
+  def place_symbol(move, symbol)
+    @board[move[0]][move[1]] = symbol if move.empty_cell?
+  end
 end
