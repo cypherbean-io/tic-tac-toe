@@ -22,4 +22,13 @@ class Player
     end
     move
   end
+
+  def make_move(board)
+    move = get_move(board)
+    until board.empty_cell?(move)
+      puts 'Cell is not empty. Try again.'
+      move = get_move(board)
+    end
+    board.place_symbol(move, @symbol)
+  end
 end
