@@ -15,7 +15,7 @@ class Board
     [[0, 2], [1, 2], [2, 2]],
     [[0, 0], [1, 1], [2, 2]],
     [[0, 2], [1, 1], [2, 0]]
-  ]
+  ].freeze
 
   def initialize
     @board = Array.new(3) { Array.new(3) }
