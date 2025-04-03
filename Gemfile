@@ -7,3 +7,5 @@ source 'https://rubygems.org'
 gem 'rubocop', '~> 1.65'
 
 gem 'rubocop-performance', '~> 1.21'
+
+gem "rspec", "~> 3.13"
